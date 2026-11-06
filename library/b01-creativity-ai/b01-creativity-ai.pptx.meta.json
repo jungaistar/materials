@@ -1,0 +1,22 @@
+{
+ "source": "01.창의력_복합문제해결에서의_AI.pptx",
+ "title": "창의력·복합문제",
+ "slides": 38,
+ "original_slides": 35,
+ "size_pptx": 123400,
+ "size_pdf": 620160,
+ "images": {
+  "images": 1,
+  "resized": 0,
+  "to_jpeg": 0,
+  "bytes_before": 4067,
+  "bytes_after": 809,
+  "skipped": 0
+ },
+ "wrap": {
+  "front": 2,
+  "back": 1,
+  "footer": true
+ },
+ "pdf": "b01-creativity-ai.pdf"
+}

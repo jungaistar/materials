@@ -1,0 +1,22 @@
+{
+ "source": "07_바이브코딩.pptx",
+ "title": "바이브코딩 포트폴리오 배포",
+ "slides": 73,
+ "original_slides": 70,
+ "size_pptx": 196199,
+ "size_pdf": 867144,
+ "images": {
+  "images": 1,
+  "resized": 0,
+  "to_jpeg": 0,
+  "bytes_before": 4067,
+  "bytes_after": 809,
+  "skipped": 0
+ },
+ "wrap": {
+  "front": 2,
+  "back": 1,
+  "footer": true
+ },
+ "pdf": "a07-vibe-coding.pdf"
+}

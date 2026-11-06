@@ -1,0 +1,496 @@
+{
+ "config": "extras/wrap/useful-ai.json",
+ "out_root": "/Volumes/aebon - 데이터/dreamit-web/06-personal/materials/library",
+ "site": "https://useful-ai.dreamitbiz.com",
+ "pdf": true,
+ "cover_page": 3,
+ "cover_width": 1280,
+ "max_image_px": 1600,
+ "jpeg_quality": 82,
+ "series": [
+  {
+   "id": "a",
+   "title": "AI 콘텐츠 제작",
+   "items": [
+    {
+     "slug": "a01-contents-pipeline",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/01_콘텐츠_제작.pptx",
+     "title": "콘텐츠 제작 파이프라인과 저작권·윤리",
+     "subtitle": "기획부터 배포까지, 대학생 크리에이터를 위한 가이드",
+     "tags": [
+      "콘텐츠 기획",
+      "편집·후반작업",
+      "플랫폼 배포",
+      "저작권",
+      "크리에이터 윤리"
+     ],
+     "summary": "기획·스토리·제작·편집·배포의 5단계 파이프라인을 따라가며 콘텐츠 한 편이 만들어지는 흐름을 익힙니다. 저작권법 기초와 공정 이용, 라이선스 종류, AI 활용과 허위정보 방지 같은 크리에이터 윤리까지 한 묶음으로 다룹니다."
+    },
+    {
+     "slug": "a02-image-generation",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/02_수려한이미지만들기.pptx",
+     "title": "수려한 이미지 만들기 — AI 이미지 생성 마스터",
+     "subtitle": "DALL-E · NanoBanana, 5요소 공식과 13가지 구도",
+     "tags": [
+      "AI 이미지 생성",
+      "프롬프트 5요소",
+      "구도 13가지",
+      "조명·스타일",
+      "수익화"
+     ],
+     "summary": "AI 이미지 생성에서 실패를 줄이는 프롬프트 5요소 공식과 13가지 구도를 예시 이미지와 함께 배웁니다. 초보자가 빠지는 다섯 가지 착각부터 조명·스타일 제어, 결과물을 다듬어 활용하는 방법까지 이어집니다."
+    },
+    {
+     "slug": "a03-video-planning",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/03_영상제작.pptx",
+     "title": "AI로 영상·숏폼 기획하기",
+     "subtitle": "대본 · 스토리보드 · 자막까지 30분 통합 워크플로우",
+     "tags": [
+      "숏폼 트렌드",
+      "대본 작성",
+      "스토리보드",
+      "AI 자막",
+      "워크플로우"
+     ],
+     "summary": "숏폼 트렌드와 알고리즘에 맞는 다섯 가지 전략을 짚고, AI 프롬프트로 대본·스토리보드·자막을 만드는 30분 워크플로우를 따라갑니다. AI 공부법 숏폼 제작 사례와 주간 실천 플랜, 무료 도구 목록이 함께 있습니다."
+    },
+    {
+     "slug": "a04-presentation-tools",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/04_프레젠테이션제작.pptx",
+     "title": "프레젠테이션 도구 활용 — 미리캔버스 · 캔바 · 감마",
+     "subtitle": "도구 선택 기준과 템플릿 커스터마이징",
+     "tags": [
+      "미리캔버스",
+      "캔바",
+      "감마",
+      "템플릿",
+      "협업"
+     ],
+     "summary": "미리캔버스·캔바·감마 세 도구의 차이와 가격 정책, 협업 기능, 템플릿 품질을 비교해 상황에 맞는 도구를 고르는 기준을 세웁니다. 템플릿을 내 발표에 맞게 바꾸는 실전 가이드와 자주 묻는 질문으로 마무리합니다."
+    },
+    {
+     "slug": "a05-effective-presentation",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/05_효과적인_프레젠테이션.pptx",
+     "title": "효과적인 프레젠테이션 스킬",
+     "subtitle": "4P 프로세스 — Planning · Preparation · Practicing · Performing",
+     "tags": [
+      "프레젠테이션",
+      "4P",
+      "청중 분석",
+      "논리 전개",
+      "Q&A 대응"
+     ],
+     "summary": "프레젠테이션의 정의와 종류, 목적을 정리한 뒤 계획·준비·연습·실행의 4P 프로세스로 발표를 설계합니다. 청중 분석, 논리 전개, 시각자료 작성, 질의응답 대응 같은 실전 스킬을 단계별로 다룹니다."
+    },
+    {
+     "slug": "a06-figma-nocode",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/06_피그마활용.pptx",
+     "title": "피그마로 노코드 앱 만들기",
+     "subtitle": "프로토타입부터 Figma Make AI 생성까지",
+     "tags": [
+      "피그마",
+      "노코드",
+      "Auto Layout",
+      "프로토타입",
+      "Figma Make"
+     ],
+     "summary": "코딩 없이 프레임·도형·텍스트로 화면을 그리고 Auto Layout 으로 반응형 UI 를 설계한 뒤 클릭 가능한 프로토타입을 만듭니다. 마지막에는 Figma Make 로 실제 웹앱을 생성해 봅니다. 준비물은 노트북·Chrome·Figma 계정입니다."
+    },
+    {
+     "slug": "a07-vibe-coding",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/07_바이브코딩.pptx",
+     "title": "클로드코드와 제미나이를 이용한 바이브코딩 포트폴리오 배포",
+     "subtitle": "환경 설정부터 GitHub Pages 실전 배포까지",
+     "tags": [
+      "바이브코딩",
+      "Claude Code",
+      "Gemini",
+      "GitHub Pages",
+      "포트폴리오"
+     ],
+     "summary": "AI 와 대화하며 결과물을 만드는 바이브코딩 방식으로 포트폴리오 웹사이트를 하루에 완성해 배포합니다. VS Code·Git·Node.js 환경 설정, 프롬프트 기법, HTML/CSS 반응형 구조, 기능 구현, GitHub Pages 배포, 성능·SEO 최적화 순서입니다."
+    }
+   ],
+   "short": "A 콘텐츠",
+   "audience": "대학생·크리에이터"
+  },
+  {
+   "id": "b",
+   "title": "대학생 역량 · 학습 도구",
+   "items": [
+    {
+     "slug": "b01-creativity-ai",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/01.창의력_복합문제해결에서의_AI.pptx",
+     "title": "창의력·복합문제 해결에서의 AI",
+     "subtitle": "역량 진단(AHP)과 NCS, AI 협업으로 의사결정까지",
+     "tags": [
+      "창의력",
+      "복합문제 해결",
+      "NCS",
+      "AHP 역량 진단",
+      "AI 협업"
+     ],
+     "summary": "역량과 능력의 구분, NCS 직무능력표준의 구조, AHP 방법론을 쓴 개인 역량 진단을 차례로 다룹니다. AI 를 단순 도구가 아니라 탐색에서 의사결정까지 함께하는 협업 파트너로 쓰는 실습과 액션 플랜으로 마무리합니다."
+    },
+    {
+     "slug": "b02-design-thinking",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/02.디자인씽킹과_생성형_AI.pptx",
+     "title": "디자인씽킹과 생성형 AI",
+     "subtitle": "공감 · 정의 · 아이데이션 — 사람 중심 문제해결",
+     "tags": [
+      "디자인씽킹",
+      "공감",
+      "페르소나",
+      "아이데이션",
+      "생성형 AI"
+     ],
+     "summary": "디자인씽킹의 뜻과 태도를 익히고 공감·정의·아이데이션 세 단계를 실습합니다. 인터뷰 인사이트와 페르소나, 아이디어 보드를 만들고 생성형 AI 로 결과물을 고도화하는 75~90분 워크숍 구성입니다."
+    },
+    {
+     "slug": "b03-computational-thinking",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/03.컴퓨터사고력.pptx",
+     "title": "컴퓨터사고력으로 과제 설계하기",
+     "subtitle": "분해 · 패턴 · 추상화 · 알고리즘",
+     "tags": [
+      "컴퓨팅 사고력",
+      "분해",
+      "패턴 인식",
+      "추상화",
+      "알고리즘"
+     ],
+     "summary": "소프트웨어 교육의 본질을 문제 해결 사고력으로 보고, 분해·패턴·추상화·알고리즘 네 요소로 일상의 문제를 다시 정의합니다. 그 절차를 과제 설계와 수행에 적용하는 방법을 정의 모음과 함께 정리했습니다."
+    },
+    {
+     "slug": "b04-markdown",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/04.markdown.pptx",
+     "title": "마크다운 실전 마스터 클래스",
+     "subtitle": "기본 문법부터 노션 · GitHub README 까지",
+     "tags": [
+      "마크다운",
+      "README",
+      "노션",
+      "GitHub",
+      "문서 작성"
+     ],
+     "summary": "제목·목록·링크·이미지·코드 같은 핵심 문법과 문서 구조화 원리를 미니 실습으로 익힙니다. README 작성, 노션 호환성, 포트폴리오 적용 팁까지 이어지는 실습 중심 구성입니다."
+    },
+    {
+     "slug": "b05-notion",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/05.Notion_마스터클래스.pptx",
+     "title": "대학생을 위한 노션 마스터 클래스",
+     "subtitle": "블록 · 페이지 · 데이터베이스로 학습·과제·프로젝트 운영",
+     "tags": [
+      "노션",
+      "데이터베이스",
+      "대시보드",
+      "템플릿",
+      "협업"
+     ],
+     "summary": "블록과 페이지, 워크스페이스의 구조를 이해하고 학기 대시보드를 만든 뒤, 데이터베이스 속성·뷰와 템플릿·리마인더로 과제·프로젝트 트래커를 완성합니다. 강의가 끝나면 나만의 노션 시스템으로 학기를 운영할 수 있습니다."
+    },
+    {
+     "slug": "b06-report-writing",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/06.리포트작성볍.pptx",
+     "title": "리포트가 낯선 대학생을 위한 리포트 작성 방법",
+     "subtitle": "주제 선정부터 퇴고까지, 90분 9단계",
+     "tags": [
+      "리포트 작성",
+      "학술적 글쓰기",
+      "주제문",
+      "자료조사",
+      "개요"
+     ],
+     "summary": "리포트는 주장과 근거로 독자를 설득하는 학술적 글쓰기라는 정의에서 출발해 과제 분석, 핵심 동사, 주제 좁히기, 주제문, 자료조사와 출처, 개요와 문단, 반론, 인용과 AI 활용까지 9단계로 진행합니다. 자료 출처는 DBpia 의 리포트 작성법입니다."
+    },
+    {
+     "slug": "b07-citation",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/07.대학생을_위한_인용_출처관리.pptx",
+     "title": "대학생을 위한 인용·출처관리",
+     "subtitle": "표절 예방과 설득력 있는 리포트를 위한 실전 가이드",
+     "tags": [
+      "인용",
+      "출처 표기",
+      "표절 예방",
+      "Zotero",
+      "AI 검증"
+     ],
+     "summary": "인용과 출처 표기가 왜 중요한지, 표절과 부정행위의 유형, 간접·직접·재인용 방식과 내주·번호주·각주·참고문헌 체계를 배웁니다. Zotero 서지관리 실습과 생성형 AI 결과물 검증 실습, 퀴즈와 체크리스트로 마무리합니다."
+    }
+   ],
+   "short": "B 학습도구",
+   "audience": "대학생"
+  },
+  {
+   "id": "c",
+   "title": "연구 방법과 AI",
+   "short": "C 연구",
+   "audience": "대학원생·연구자",
+   "items": [
+    {
+     "slug": "c01-qualitative-research",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/c01_질적연구.pptx",
+     "title": "생성형 AI 기반 질적 연구",
+     "subtitle": "설계·코딩에서 주제·담화·내러티브 분석, 엄격성 검증과 보고서까지 4모듈 20시간 과정",
+     "tags": [
+      "질적 연구",
+      "주제 분석",
+      "담화 분석",
+      "내러티브 연구",
+      "연구 윤리"
+     ],
+     "summary": "질적 연구 설계와 익명화, 인터뷰 설계, 코딩과 코드북 작성에서 출발해 주제 분석·담화 분석·문헌 분석·생애사 분석으로 넓혀 가는 4개 모듈 강의안입니다. 각 단계에서 생성형 AI가 맡을 수 있는 초안 작업과 연구자가 끝까지 책임져야 할 해석·검증을 나누고, Lincoln & Guba의 엄격성 기준과 피어리뷰로 질적 연구 보고서를 완성합니다."
+    },
+    {
+     "slug": "c02-quantitative-research",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/c02_양적연구.pptx",
+     "title": "생성형 AI 기반 양적 연구",
+     "subtitle": "연구 설계·통계 해석·Figure 제작·보고서 작성까지 4모듈 20시간 과정",
+     "tags": [
+      "양적 연구",
+      "통계 해석",
+      "APA 7판",
+      "데이터 시각화",
+      "연구 보고서"
+     ],
+     "summary": "연구문제·가설·변수 설계와 측정 수준, AI 설문 문항 초안에서 시작해 t검정·ANOVA·상관·회귀·카이제곱 결과를 APA 7판 형식으로 해석하고 보고하는 법을 다루는 4개 모듈 강의안입니다. AI로 Figure·인포그래픽·구조도 초안을 만들어 학술 기준으로 검증하고, 결과·논의·한계·결론을 갖춘 보고서와 개인 AI 활용 프로토콜로 마무리합니다."
+    }
+   ]
+  },
+  {
+   "id": "d",
+   "title": "실무 워크숍",
+   "short": "D 실무",
+   "audience": "직장인·실무자",
+   "items": [
+    {
+     "slug": "d01-vibe-coding-fullstack",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/d01_풀스택_바이브코딩_3일.pptx",
+     "title": "Claude Code와 함께하는 풀스택 바이브코딩 3일 워크숍",
+     "subtitle": "Cursor·React·Supabase·Streamlit으로 웹앱과 AI 데이터 앱을 만들어 배포하기",
+     "tags": [
+      "바이브코딩",
+      "Claude Code",
+      "React",
+      "Supabase",
+      "Streamlit"
+     ],
+     "summary": "자연어로 요구하면 AI가 코드를 만드는 바이브코딩으로 3일 동안 풀스택 웹앱과 Streamlit 데이터 앱을 만들어 배포합니다. 1일차 React 프론트엔드, 2일차 Express·Supabase·인증, 3일차 Python·Streamlit·Claude API 순서로 진행하며, Python·Streamlit 필수 문법 부록과 프로젝트 24선 카탈로그를 담았습니다."
+    },
+    {
+     "slug": "d02-process-improvement",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/d02_업무프로세스개선.pptx",
+     "title": "AI 활용으로 업무프로세스 개선과 사례 공유",
+     "subtitle": "반복업무를 줄이고 성과를 높이는 일하는 방식 혁신",
+     "tags": [
+      "업무프로세스",
+      "업무개선",
+      "생성형 AI",
+      "사례 공유",
+      "프롬프트"
+     ],
+     "summary": "업무프로세스의 개념과 8가지 비효율 유형, 진단 5단계, 효과성·실행가능성 매트릭스로 개선 과제를 고르는 방법을 정리합니다. 회의록·보고서·메일·고객 응대·자료 조사·행사 운영의 가상 사례로 AI 적용 전후를 비교하고, 바로 쓰는 프롬프트와 체크리스트를 부록으로 담았습니다."
+    },
+    {
+     "slug": "d03-claude-work-automation",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/d03_Claude_업무자동화.pptx",
+     "title": "Claude와 함께하는 업무자동화 실무",
+     "subtitle": "내 업무 문서로 요약·보고서·메일·템플릿을 만들고 하루 루틴으로 굳히기",
+     "tags": [
+      "Claude",
+      "업무자동화",
+      "프롬프트",
+      "프로젝트",
+      "템플릿"
+     ],
+     "summary": "2026년 10월 Claude 화면을 기준으로 파일 첨부·프로젝트·메모리를 업무에 쓰는 법을 익히고, 긴 문서 요약·보고서와 회의록·메일과 데이터 해석을 복사해 쓰는 프롬프트로 직접 만들어 봅니다. 반복 업무를 [빈칸] 템플릿과 프로젝트 지침, 하루 루틴으로 바꾸고 30일 액션플랜으로 마무리하며, 직무 트랙 4종과 프롬프트 라이브러리 12선을 함께 담았습니다."
+    },
+    {
+     "slug": "d04-data-viz-excel",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/d04_데이터분석_시각화.pptx",
+     "title": "데이터 분석 실습 & 시각화",
+     "subtitle": "엑셀로 익히는 EDA·시각화·대시보드 1일 과정",
+     "tags": [
+      "데이터 분석",
+      "EDA",
+      "시각화",
+      "엑셀",
+      "대시보드"
+     ],
+     "summary": "코딩 없이 엑셀만으로 데이터를 탐색하고(EDA), 목적에 맞는 차트로 정직하게 표현하고, KPI 대시보드로 종합하는 1일 6시간 과정입니다. 피벗테이블·조건부 서식·슬라이서 실습과 차트 선택 치트시트, 왜곡을 피하는 원칙을 담았습니다."
+    }
+   ]
+  },
+  {
+   "id": "e",
+   "title": "교수자를 위한 AI",
+   "short": "E 교수자",
+   "audience": "대학 교수·교수자",
+   "items": [
+    {
+     "slug": "e01-instructional-design-ai",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/e01_교수설계_AI.pptx",
+     "title": "생성형 AI 기반 교수 설계",
+     "subtitle": "강의계획서·평가·학습자료·품질 관리까지 4모듈 20시간 과정",
+     "tags": [
+      "교수설계",
+      "프롬프트 엔지니어링",
+      "평가 루브릭",
+      "AI 보안",
+      "AI 윤리"
+     ],
+     "summary": "생성형 AI의 작동 원리에서 출발해 강의계획서·강의안, 평가 문항과 루브릭, 수업 단계별 학습자료를 AI로 설계하는 과정을 4개 모듈로 정리했습니다. 프롬프트 인젝션·익명화 같은 보안, 사실성·타당성·편향 품질 점검, 윤리·정책을 거쳐 개인 맞춤 교수 프로토콜을 세우는 데까지 이어집니다."
+    },
+    {
+     "slug": "e02-faculty-ai-workflow",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/e02_교수_AI_2시간.pptx",
+     "title": "교수의 일하는 방식을 AI로 바꾸는 2시간",
+     "subtitle": "강의계획서·평가·피드백에 바로 쓰는 생성형 AI 활용법",
+     "tags": [
+      "교수 업무",
+      "강의계획서",
+      "평가 설계",
+      "학생 피드백",
+      "SCORE 프롬프트 평가"
+     ],
+     "summary": "교수 업무에 맞춘 2시간 특강 강의안입니다. 생성형 AI 서비스 비교와 윤리 원칙을 짚은 뒤 강의계획서 작성, 평가 루브릭·문항 설계, 성장 중심 학생 피드백을 프롬프트 실습으로 다루고, 프롬프트 5요소와 SCORE 평가 모델로 마무리합니다."
+    }
+   ]
+  },
+  {
+   "id": "f",
+   "title": "강사 양성",
+   "short": "F 강사",
+   "audience": "강사·예비 강사",
+   "items": [
+    {
+     "slug": "f01-instructor-process-portfolio",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/f01_강사_프로세스_포트폴리오.pptx",
+     "title": "강사 업무 프로세스와 포트폴리오",
+     "subtitle": "의뢰에서 정산까지 표준화하고, 그 결과를 포트폴리오로 쌓는 2부 과정",
+     "tags": [
+      "강사 양성",
+      "업무 표준화",
+      "강의 설계",
+      "AI 활용",
+      "포트폴리오"
+     ],
+     "summary": "신규 강사가 의뢰·요구분석·설계·제작·운영·피드백의 흐름을 한 장에 그리고, 7종 템플릿과 AI 프롬프트로 반복 업무를 줄이는 과정입니다. 2부에서는 그 결과물을 정체성 문장·실적 표·대표 강의 1쪽·10장/20장 포트폴리오로 엮고 90일 실행 계획을 세웁니다."
+    },
+    {
+     "slug": "f02-instructor-portfolio-strategy",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/f02_강사_포트폴리오_미래전략.pptx",
+     "title": "강사 포트폴리오 구축과 미래전략",
+     "subtitle": "지식 전달자에서 학습 경험 디자이너로 — 자격과 경험을 강의 자산으로",
+     "tags": [
+      "강사 포트폴리오",
+      "강사 브랜딩",
+      "자격 활용",
+      "강의 상품화",
+      "미래 역량"
+     ],
+     "summary": "강사의 정체성 문장, 전문분야 3~5개, 5장 포트폴리오 구조, 키워드·제안서·디지털 채널로 이어지는 브랜딩 확장을 다룹니다. AI 시대 강사의 역할 변화와 실습형 강의 설계, 수익 구조를 정리하고 6단계 실습으로 90일 전략을 세웁니다."
+    },
+    {
+     "slug": "f03-ai-marketing-assistant",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/f03_AI마케팅_강사비서.pptx",
+     "title": "AI 통합 마케팅과 나만의 강사 비서",
+     "subtitle": "전략표 → 홍보 콘텐츠 5종 → 에이전트 이해 → 강사 비서 시스템 프롬프트",
+     "tags": [
+      "AI 마케팅",
+      "강사 홍보",
+      "프롬프트 설계",
+      "AI 에이전트",
+      "AI 비서"
+     ],
+     "summary": "강사의 홍보·제안·응대 업무를 통합 마케팅 전략표 한 장으로 정리하고, RACOC 프롬프트로 홍보 콘텐츠 5종을 한 번에 만듭니다. 챗봇·자동화·에이전트의 차이를 익힌 뒤 ChatGPT·Claude 프로젝트나 Gemini Gem 의 지침 칸에 넣을 강사 비서 시스템 프롬프트를 완성합니다."
+    },
+    {
+     "slug": "f04-instructor-branding-teaching",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/f04_강사브랜딩_교수법.pptx",
+     "title": "강사 브랜딩과 교수법",
+     "subtitle": "학습자가 변화하도록 강의를 설계하고 전달한다",
+     "tags": [
+      "강사 브랜딩",
+      "교수 설계",
+      "학습목표",
+      "교수법",
+      "스피치"
+     ],
+     "summary": "브랜드 문장 공식으로 강사 정체성을 한 줄로 정리하고, 1장 강의 기획서와 4단 교안으로 강의를 설계합니다. 성인학습 원리에 맞춘 교수법 매칭, 질문·SBI 피드백, 오프닝·설명·마무리 스피치를 익힌 뒤 3분 미니 강의로 시연합니다."
+    },
+    {
+     "slug": "f05-ai-integrated-pedagogy",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/f05_AI통합교수법.pptx",
+     "title": "AI 통합교수법 설계와 실행",
+     "subtitle": "13개 교수설계 이론을 생성형 AI 강의 설계에 녹여 쓰는 예비 AI 강사 과정",
+     "tags": [
+      "교수설계",
+      "Bloom 분류학",
+      "백워드 설계",
+      "액티브 러닝",
+      "AI 강사"
+     ],
+     "summary": "Bloom 분류학·구성적 정렬·백워드 설계·커크패트릭 평가에서 ADDIE·Gagné 9가지 교수사건·SAM, 액티브 러닝·PBL·플립러닝, 스캐폴딩·구성주의·TPACK까지 13개 교수설계 이론을 이론마다 요약 카드와 AI 적용 장으로 정리한 강의안입니다. 이론 매트릭스와 7단계 설계 워크플로, 예비 강사가 익혀 둘 현장 노하우 5가지, 강의 한 편을 직접 설계하는 워크북과 17개 점검표로 마무리합니다."
+    }
+   ]
+  },
+  {
+   "id": "g",
+   "title": "창업과 전략",
+   "short": "G 창업",
+   "audience": "예비·초기 창업자",
+   "items": [
+    {
+     "slug": "g01-business-strategy-frameworks",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/g01_비즈니스기획_전략_8프레임워크.pptx",
+     "title": "AI 기반 비즈니스 기획과 전략 수립",
+     "subtitle": "8대 전략 프레임워크를 창업 사례에 적용하는 12시간 과정 (사례 지역: 전남)",
+     "tags": [
+      "창업 전략",
+      "비즈니스 모델",
+      "SWOT·TOWS",
+      "전략 프레임워크",
+      "AI 프롬프트"
+     ],
+     "summary": "PESTEL·5Forces·BCG·SWOT-TOWS·BMC·VRIO·Value Chain·Ansoff 8개 프레임워크를 원전과 함께 익히고, 전남 해양관광·가공식품 가상 사례로 적용해 봅니다. 프레임워크마다 AI 프롬프트 초안과 사람의 출처 검증 절차를 두고, 마지막에 본인 사업을 1페이지 보고서로 통합합니다."
+    },
+    {
+     "slug": "g02-startup-restart",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/g02_창업과_재도약.pptx",
+     "title": "창업과 재도약",
+     "subtitle": "예비·초기·재도약 사업자를 위한 4시간 실전 워크숍",
+     "tags": [
+      "창업",
+      "린 캔버스",
+      "MVP",
+      "마케팅",
+      "피벗·재도약"
+     ],
+     "summary": "창업 마인드셋과 국내 창업 생태계·생존율 통계로 출발점을 점검하고, 린 캔버스와 MVP로 가장 위험한 가설을 검증하는 법을 익힙니다. 저예산 마케팅 채널·AARRR 퍼널, 위기 신호와 피벗 10유형, 재도약 자금조달 옵션을 다루고 워크시트 4장으로 90일 계획을 세웁니다."
+    }
+   ]
+  },
+  {
+   "id": "h",
+   "title": "프로그래밍 입문",
+   "short": "H 프로그래밍",
+   "audience": "대학생·입문자",
+   "items": [
+    {
+     "slug": "h01-python-basics",
+     "input": "/Volumes/aebon - 데이터/04-teaching/useful-ai/src-edited/h01_파이썬_기초응용심화.pptx",
+     "title": "파이썬 기초·응용·심화",
+     "subtitle": "설치부터 작은 프로젝트·웹 크롤링까지 — 처음 배우는 사람을 위한 파이썬",
+     "tags": [
+      "파이썬",
+      "프로그래밍 입문",
+      "자료구조",
+      "예외 처리",
+      "웹 크롤링"
+     ],
+     "summary": "python.org 설치와 venv·VS Code 로 환경을 갖추고, 변수·조건·반복·자료구조·함수·모듈·파일·예외를 「개념 → 코드 → 실행 결과 → 흔한 오류」 순서로 익힙니다. 계산기·숫자 맞추기·타이머 세 프로젝트를 요구사항부터 완성까지 만들고, robots.txt 와 이용약관을 지키며 연습용 사이트에서 requests·BeautifulSoup 으로 데이터를 모아 CSV 로 저장합니다. 모든 코드는 Python 3.12~3.14 에서 실제로 실행해 확인했습니다."
+    }
+   ]
+  }
+ ]
+}

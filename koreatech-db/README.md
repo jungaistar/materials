@@ -1,0 +1,52 @@
+# koreatech-db — 강의 슬라이드
+
+경영데이터베이스및실습(CCT770) 학습사이트가 참조하는 강의 자료입니다.
+사이트: <https://koreatech-db.dreamitbiz.com/bizdata>
+
+## 파일 두 벌을 두는 이유
+
+| 파일 | 용도 | 링크되는 곳 |
+|---|---|---|
+| `<제목>.pdf` | **원본 · 다운로드용** (전체 화질) | 사이트의 [⬇ 내려받기] |
+| `<제목>_웹열람본.pdf` | **화면 재생용** (쪽당 1920×1080 이미지로 재구성) | 사이트의 슬라이드 화면 |
+
+- 웹 재생은 jsDelivr CDN을 거치는데 **파일당 20MB 제한**이 있어(실측 403), 원본이 크면 그대로는 재생되지 않습니다.
+- 원본 PDF를 Ghostscript로 압축하면 이 자료들은 **본문이 백지로 날아갑니다**(1~3쪽 실측). 압축 대신 **쪽을 이미지로 다시 그려** 열람본을 만듭니다.
+
+## 열람본 만드는 법
+
+```sh
+pdftoppm -r 96 -jpeg -jpegopt quality=82 원본.pdf pg
+python3 -c "
+import glob; from PIL import Image
+f=sorted(glob.glob('pg-*.jpg')); im=[Image.open(x).convert('RGB') for x in f]
+im[0].save('원본_웹열람본.pdf', save_all=True, append_images=im[1:], resolution=96.0)"
+```
+
+만든 뒤 **아무 쪽이나 원본과 눈으로 비교**해 내용이 살아 있는지 확인합니다.
+
+## 3~6장 (2026-09-27 추가) — deckgen 으로 생성
+
+| 파일 | 용도 |
+|---|---|
+| `3장_경영_지표_KPI.pdf` · `4장_숫자_읽기의_기본.pdf` · `5장_분석의_4단계와_데이터_기반_의사결정.pdf` · `6장_보여주기와_지키기.pdf` | 사이트 재생 + 내려받기 (LibreOffice 로 뽑은 벡터 PDF, 글꼴 내장 — 웹열람본이 따로 필요 없다) |
+| 같은 이름의 `.pptx` 4종 | 편집용 원본 (Pretendard 글꼴 설치 필요) |
+
+1·2장은 미리캔버스, 3~6장은 `dreamit-web/04-templates/deckgen_v1` 생성기로 만든다.
+입력(스펙 JSON·brand.json)은 `koreatech-db` 리포 `decks/bizdata/`, 다시 만드는 법은 그 폴더의 README.
+
+## 경영 실습 DB 따라하기 (2026-09-27 추가)
+
+| 파일 | 용도 |
+|---|---|
+| `다온유통_실습DB_따라하기.pdf` · `.pptx` | `/business` 페이지 「안내 슬라이드」(18장) — Workbench 접속부터 첫 질문·초기화까지. 입력은 koreatech-db 리포 `decks/daon/L00.json` |
+
+## 주차별 강의 · 이론 편람 슬라이드 (2026-10-09 추가)
+
+| 폴더 | 파일 | 용도 |
+|---|---|---|
+| `weeks/` | `NN주차_<제목>.pdf` · `.pptx` 15종 | 주차 상세 페이지(`/weeks/N`) 재생 + 내려받기 |
+| `theory/` | `이론N장_<제목>.pdf` · `.pptx` 8종 | 이론 편람(`/theory/N`) 재생 + 내려받기 |
+
+입력은 koreatech-db 리포 `decks/weeks/`·`decks/theory/`(스펙 JSON), 생성기는 `dreamit-web/04-templates/deckgen`(정본).
+같은 날 `6장_보여주기와_지키기.*` 를 다시 구웠다(본문 정정 — 품질 6요소 예시를 실습 DB 와 맞춤).
