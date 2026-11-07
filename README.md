@@ -21,7 +21,7 @@ DreamIT Biz 학습사이트에서 내려받는 **강의자료 정본 보관소**
 
 | 용도 | 주소 | 왜 |
 |---|---|---|
-| **내려받기** | `https://raw.githubusercontent.com/aebonlee/materials/main/<사이트>/<파일명>` | raw는 `application/octet-stream`이라 클릭하면 저장됩니다 |
+| **내려받기** | `https://raw.githubusercontent.com/jungaistar/materials/main/<사이트>/<파일명>` | raw는 `application/octet-stream`이라 클릭하면 저장됩니다 |
 | **사이트 안에서 재생**(PDF) | raw 주소를 `fetch` → `new Blob([buf], {type:'application/pdf'})` → `blob:` 주소를 iframe 에(또는 pdf.js 로 raw 를 직접 그리기) | raw 는 CORS `*` 라 받아서 감쌀 수 있습니다. 구현 정본 `01-edu-sites/seoultech/src/lib/materialsPdf.ts`(`usePdfBlobUrl` · 새 탭 `openPdfInNewTab`) |
 | **사이트 안에서 재생**(PPTX) | `https://view.officeapps.live.com/op/embed.aspx?src=<raw 주소를 URL 인코딩>` | Office 온라인 뷰어. 원본이 공개 위치여야 합니다 |
 
