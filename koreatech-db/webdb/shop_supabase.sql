@@ -1,13 +1,31 @@
 -- ============================================================
 -- 내 쇼핑몰 DB 만들기 (Supabase · 접두어 shop_)
 -- 경영데이터베이스및실습 · 웹 DB 실습 2
--- 사용법: Supabase → SQL Editor → New query → 이 파일 전체를 붙여 넣고 Run
---         두 번 실행해도 안전합니다(이미 있으면 건너뜁니다).
--- 만드는 것은 모두 이름이 shop_ 으로 시작합니다.
---   shop_profiles     회원 (이름 · 연락처 · 등급 · 포인트 · 역할)
---   shop_products     상품
---   shop_orders       주문
---   shop_order_items  주문 상세 (주문 한 건에 담긴 상품들)
+-- ============================================================
+--
+-- [이 파일을 쓰는 순서]
+--   1) 이 파일을 메모장(또는 VS Code)으로 연다
+--   2) Ctrl + A (전체 선택) → Ctrl + C (복사)
+--   3) Supabase 왼쪽 메뉴 SQL Editor → 위쪽 「+ New」 로 빈 창을 연다
+--   4) Ctrl + V (붙여 넣기) → 오른쪽 위 초록 「Run」 (Ctrl + Enter)
+--      · 「지우는 명령이 들어 있다」 는 경고 창이 뜨면 내용을 읽고 실행을 누른다
+--        (이미 있는 규칙을 지우고 다시 만드는 줄이 있어서 뜨는 경고다 — 데이터는 지우지 않는다)
+--   5) 아래 Results 에 Success 가 나오면 끝
+--
+-- [확인하는 법]
+--   왼쪽 메뉴 Table Editor 에 shop_ 으로 시작하는 표 4개가 보인다
+--   shop_products 를 누르면 예시 상품 6개가 들어 있다
+--
+-- [알아 둘 것]
+--   · 두 번 실행해도 안전하다 (이미 있으면 건너뛴다)
+--   · 줄 앞의 「--」 는 주석이다. 설명일 뿐 실행되지 않는다
+--   · 만드는 것은 모두 이름이 shop_ 으로 시작한다 (접두어)
+--       shop_profiles     회원 (이름 · 연락처 · 등급 · 포인트 · 역할)   ← 다온유통의 customers
+--       shop_products     상품 (이름 · 분류 · 가격 · 재고)              ← products
+--       shop_orders       주문 (누가 · 얼마 · 상태 · 언제)              ← orders
+--       shop_order_items  주문 상세 (주문 한 건에 담긴 상품들)          ← order_items
+--   · 접두어를 바꾸고 싶으면 이 파일의 shop_ 을 모두 같은 말로 바꾼다
+--     (쇼핑몰 코드 안의 표 이름도 똑같이 바꿔야 한다)
 -- ============================================================
 
 -- 0. 실행 위치 확인 — 「내」 Supabase 프로젝트에서만 실행합니다.
@@ -22,6 +40,12 @@ END
 $guard$;
 
 -- 1. 회원 표 — 로그인 계정(auth.users) 한 명당 한 줄
+--    auth.users 는 Supabase 가 가입 · 로그인을 맡으며 스스로 관리하는 표다.
+--    거기에는 이메일과 비밀번호만 있으므로, 이름 · 등급 · 포인트는 이 표에 따로 둔다.
+--    PRIMARY KEY  : 회원을 하나로 짚는 열 (3주차)
+--    REFERENCES   : auth.users 의 id 를 가리키는 외래키 — 계정이 지워지면 이 줄도 지워진다
+--    DEFAULT      : 값을 안 넣으면 들어가는 기본값 (가입하면 WELCOME 등급 · 3,000 포인트 · 회원)
+--    CHECK        : 정해 둔 값만 받는다 (없는 등급, 음수 포인트를 DB 가 거절한다)
 CREATE TABLE IF NOT EXISTS public.shop_profiles (
   id         uuid PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
   email      text,
@@ -37,6 +61,8 @@ CREATE TABLE IF NOT EXISTS public.shop_profiles (
 );
 
 -- 2. 상품 표
+--    id 는 1, 2, 3 … 으로 자동으로 매겨진다 (GENERATED ALWAYS AS IDENTITY = MySQL 의 AUTO_INCREMENT)
+--    is_active 가 false 인 상품은 방문자에게 보이지 않는다 (품절 · 판매 중지에 쓴다)
 CREATE TABLE IF NOT EXISTS public.shop_products (
   id         bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   name       text NOT NULL,
@@ -49,6 +75,9 @@ CREATE TABLE IF NOT EXISTS public.shop_products (
 );
 
 -- 3. 주문 표 · 주문 상세 표
+--    주문 한 건에 상품이 여러 개 담기므로 표를 둘로 나눈다 (2주차 1 : N 관계)
+--    user_id 의 DEFAULT auth.uid() : 지금 로그인한 사람의 id 가 자동으로 들어간다
+--    주문 상세의 기본키는 (order_id, product_id) 두 열을 묶은 복합키다
 CREATE TABLE IF NOT EXISTS public.shop_orders (
   id         bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   user_id    uuid NOT NULL DEFAULT auth.uid() REFERENCES auth.users(id) ON DELETE CASCADE,
@@ -67,6 +96,7 @@ CREATE TABLE IF NOT EXISTS public.shop_order_items (
 );
 
 -- 4. 관리자인지 묻는 함수 — 아래 보안 규칙에서 씁니다
+--    지금 로그인한 사람의 role 이 admin 이면 true, 아니면 false 를 돌려준다
 CREATE OR REPLACE FUNCTION public.shop_is_admin()
 RETURNS boolean
 LANGUAGE sql
@@ -141,6 +171,12 @@ GRANT  EXECUTE ON FUNCTION public.shop_admin_update_member(uuid, text, integer, 
 GRANT  EXECUTE ON FUNCTION public.shop_is_admin() TO anon, authenticated;
 
 -- 8. 보안 규칙(RLS) — 「누가 어느 줄을 볼 수 있는가」
+--    RLS(Row Level Security)를 켜면 규칙(POLICY)이 허락한 줄만 읽고 쓸 수 있다.
+--    쇼핑몰 파일에 든 공개 키는 누구나 볼 수 있으므로, 지키는 일은 화면이 아니라 이 규칙이 한다.
+--      anon          = 로그인하지 않은 방문자
+--      authenticated = 로그인한 회원
+--    GRANT  : 표에 어떤 일(SELECT · INSERT · UPDATE · DELETE)을 할 수 있는지 (10주차 DCL)
+--    POLICY : 그 가운데 「어느 줄」 까지인지
 ALTER TABLE public.shop_profiles    ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.shop_products    ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.shop_orders      ENABLE ROW LEVEL SECURITY;
